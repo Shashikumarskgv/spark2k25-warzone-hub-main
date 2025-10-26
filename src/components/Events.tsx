@@ -46,14 +46,15 @@ const Events = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 border border-secondary/30 mb-4">
             <Trophy className="w-4 h-4 text-secondary" />
             <span className="text-sm font-orbitron font-semibold text-secondary uppercase tracking-wider">
-              Event Categories
+              What's Happening
             </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-6">
-            Choose Your <span className="text-primary text-glow-orange">Battlefield</span>
+            <span className="text-secondary">Event</span>{" "}
+            <span className="text-primary">Lineup</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-exo">
-            Over 50 events across multiple categories. Find your passion and dominate the competition.
+            Choose your arena. Multiple competitions across gaming, tech, arts, and academics.
           </p>
         </div>
 
@@ -70,7 +71,7 @@ const Events = () => {
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {/* Card */}
-                <div className="relative p-8 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary/50 transition-all duration-500 hover:transform hover:scale-[1.02] overflow-hidden">
+                <div className="relative p-8 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary/50 transition-all duration-300 overflow-hidden">
                   {/* Animated Background Glow */}
                   <div
                     className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
@@ -85,10 +86,10 @@ const Events = () => {
                     {/* Icon and Title */}
                     <div className="flex items-start gap-4 mb-4">
                       <div
-                        className={`w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 ${
+                        className={`w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300 ${
                           isOrange
-                            ? "bg-primary/20 group-hover:shadow-[0_0_20px_hsl(var(--fire-orange)/0.5)]"
-                            : "bg-secondary/20 group-hover:shadow-[0_0_20px_hsl(var(--neon-cyan)/0.5)]"
+                            ? "bg-primary/20"
+                            : "bg-secondary/20"
                         }`}
                       >
                         <Icon

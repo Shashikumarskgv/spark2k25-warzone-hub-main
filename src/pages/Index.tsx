@@ -6,10 +6,12 @@ import Gallery from "@/components/Gallery";
 import Schedule from "@/components/Schedule";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import SparkEffect from "@/components/SparkEffect";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground relative">
+      <SparkEffect />
       <Navbar />
       <main>
         <Hero />

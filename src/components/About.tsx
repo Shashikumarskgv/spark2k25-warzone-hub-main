@@ -35,18 +35,18 @@ const About = () => {
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-block px-4 py-2 rounded-full bg-card/50 border border-primary/30 mb-4">
             <span className="text-sm font-orbitron font-semibold text-primary uppercase tracking-wider">
-              About SPARK 2K25
+              About the Event
             </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-6">
-            <span className="text-glow-cyan">Rise.</span>{" "}
-            <span className="text-primary text-glow-orange">Play.</span>{" "}
-            <span className="text-glow-cyan">Conquer.</span>
+            <span className="text-secondary">What is</span>{" "}
+            <span className="text-primary">SPARK 2K25?</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-exo">
-            SPARK 2K25 is SV College's flagship annual event that blends gaming, technology, 
-            and culture into an explosive three-day experience. Join us for epic battles, 
-            innovative showcases, and memories that last a lifetime.
+            SPARK 2K25 is SV College's flagship annual event that brings together the brightest minds 
+            and most talented performers for an electrifying celebration of creativity, competition, and teamwork. 
+            From intense gaming tournaments to challenging coding contests and captivating cultural performances, 
+            SPARK offers something for everyone.
           </p>
         </div>
 

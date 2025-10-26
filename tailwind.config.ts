@@ -100,6 +100,11 @@ export default {
           from: { transform: "translateX(-100%)", opacity: "0" },
           to: { transform: "translateX(0)", opacity: "1" },
         },
+        "spark-rise": {
+          "0%": { transform: "translateY(0) scale(1)", opacity: "0.6" },
+          "50%": { opacity: "0.8" },
+          "100%": { transform: "translateY(-100vh) scale(0)", opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -110,6 +115,7 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "slide-up": "slide-up 0.6s ease-out",
         "slide-in": "slide-in 0.6s ease-out",
+        "spark-rise": "spark-rise 6s linear infinite",
       },
     },
   },
