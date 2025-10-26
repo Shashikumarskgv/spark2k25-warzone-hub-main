@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 
-interface Spark {
-  id: number;
-  left: number;
-  animationDuration: number;
-  delay: number;
-  size: number;
-}
-
 const SparkEffect = () => {
-  const [sparks, setSparks] = useState<Spark[]>([]);
+  const [sparks, setSparks] = useState([]);
 
   useEffect(() => {
     // Generate initial sparks
