@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import sparkLogo from "@/assets/spark-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,15 +19,29 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (id === "events-page") {
+      navigate("/events");
+      setIsOpen(false);
+      return;
+    }
+    
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
     setIsOpen(false);
   };
 
   const navLinks = [
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
-    { name: "Events", id: "events" },
+    { name: "Events", id: "events-page" },
     { name: "Gallery", id: "gallery" },
     { name: "Schedule", id: "schedule" },
     { name: "Contact", id: "contact" },

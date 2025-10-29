@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Sword, Zap, Trophy } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroBattlefield from "@/assets/hero-battlefield.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -92,7 +95,7 @@ const Hero = () => {
             <Button
               variant="battle"
               size="xl"
-              onClick={() => scrollToSection("events")}
+              onClick={() => navigate("/events")}
             >
               Explore Events
             </Button>
