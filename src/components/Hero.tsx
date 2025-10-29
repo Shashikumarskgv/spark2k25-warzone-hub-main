@@ -3,7 +3,7 @@ import { Sword, Zap, Trophy } from "lucide-react";
 import heroBattlefield from "@/assets/hero-battlefield.jpg";
 
 const Hero = () => {
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 

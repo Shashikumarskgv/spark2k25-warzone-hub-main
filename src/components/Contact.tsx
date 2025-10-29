@@ -13,7 +13,7 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Message sent! We'll get back to you soon.", {
       description: "Thank you for contacting SPARK 2K25",
@@ -21,7 +21,7 @@ const Contact = () => {
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,

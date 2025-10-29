@@ -1,4 +1,5 @@
 import { Gamepad2, Code, Music, Lightbulb, Trophy, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Events = () => {
   const eventCategories = [
