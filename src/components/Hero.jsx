@@ -92,7 +92,7 @@ const Hero = () => {
             <Button
               variant="battle"
               size="xl"
-              onClick={() => scrollToSection("events")}
+              onClick={() => window.location.href = '/events'}
             >
               Explore Events
             </Button>
