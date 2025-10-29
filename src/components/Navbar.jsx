@@ -24,7 +24,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
-    { name: "Events", href: "/events" },
+    { name: "Events", id: "events" },
     { name: "Gallery", id: "gallery" },
     { name: "Schedule", id: "schedule" },
     { name: "Contact", id: "contact" },
@@ -58,9 +58,9 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Button
-                key={link.id || link.href}
+                key={link.id}
                 variant="ghost_glow"
-                onClick={() => link.href ? window.location.href = link.href : scrollToSection(link.id)}
+                onClick={() => scrollToSection(link.id)}
                 className="font-orbitron"
               >
                 {link.name}
@@ -83,9 +83,9 @@ const Navbar = () => {
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Button
-                  key={link.id || link.href}
+                  key={link.id}
                   variant="ghost_glow"
-                  onClick={() => link.href ? window.location.href = link.href : scrollToSection(link.id)}
+                  onClick={() => scrollToSection(link.id)}
                   className="w-full justify-start font-orbitron"
                 >
                   {link.name}

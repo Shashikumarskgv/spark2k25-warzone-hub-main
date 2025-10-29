@@ -105,12 +105,6 @@ export default {
           "50%": { opacity: "0.8" },
           "100%": { transform: "translateY(-100vh) scale(0)", opacity: "0" },
         },
-        "fall": {
-          "0%": { transform: "translateY(-100vh)", opacity: "0" },
-          "10%": { opacity: "0.8" },
-          "90%": { opacity: "0.8" },
-          "100%": { transform: "translateY(100vh)", opacity: "0" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
