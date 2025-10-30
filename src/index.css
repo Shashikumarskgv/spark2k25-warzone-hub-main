@@ -106,4 +106,53 @@ All colors MUST be HSL.
   .gradient-hero {
     background: var(--gradient-hero);
   }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes fire-rise {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-25vh) translateX(10px) scale(1.2);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-50vh) translateX(-10px) scale(1);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateY(-75vh) translateX(15px) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px hsl(var(--fire-orange) / 0.5),
+                 0 0 20px hsl(var(--fire-orange) / 0.3),
+                 0 0 30px hsl(var(--fire-orange) / 0.2);
+  }
+  50% {
+    text-shadow: 0 0 20px hsl(var(--fire-orange) / 0.8),
+                 0 0 30px hsl(var(--fire-orange) / 0.5),
+                 0 0 40px hsl(var(--fire-orange) / 0.3);
+  }
 }
