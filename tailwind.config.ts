@@ -105,6 +105,28 @@ export default {
           "50%": { opacity: "0.8" },
           "100%": { transform: "translateY(-100vh) scale(0)", opacity: "0" },
         },
+        "fire-rise": {
+          "0%": {
+            transform: "translateY(0) translateX(0) scale(1)",
+            opacity: "0.6",
+          },
+          "25%": {
+            transform: "translateY(-25vh) translateX(-10px) scale(1.1)",
+            opacity: "0.8",
+          },
+          "50%": {
+            transform: "translateY(-50vh) translateX(15px) scale(0.9)",
+            opacity: "0.7",
+          },
+          "75%": {
+            transform: "translateY(-75vh) translateX(-5px) scale(1.05)",
+            opacity: "0.5",
+          },
+          "100%": {
+            transform: "translateY(-100vh) translateX(10px) scale(0.8)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -116,6 +138,7 @@ export default {
         "slide-up": "slide-up 0.6s ease-out",
         "slide-in": "slide-in 0.6s ease-out",
         "spark-rise": "spark-rise 6s linear infinite",
+        "fire-rise": "fire-rise 8s ease-in infinite",
       },
     },
   },

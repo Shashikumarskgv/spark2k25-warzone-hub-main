@@ -25,6 +25,12 @@ const Navbar = () => {
       return;
     }
     
+    if (id === "gallery-page") {
+      navigate("/gallery");
+      setIsOpen(false);
+      return;
+    }
+    
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
@@ -42,7 +48,7 @@ const Navbar = () => {
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
     { name: "Events", id: "events-page" },
-    { name: "Gallery", id: "gallery" },
+    { name: "Gallery", id: "gallery-page" },
     { name: "Schedule", id: "schedule" },
     { name: "Contact", id: "contact" },
   ];
