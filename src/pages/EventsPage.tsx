@@ -10,6 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import FireParticles from "@/components/FireParticles";
 
 interface Event {
   id: string;
@@ -146,6 +147,7 @@ const EventsPage = () => {
   });
 
   return (
+          
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       {/* Floating Golden Particles */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
@@ -169,7 +171,7 @@ const EventsPage = () => {
 
       {/* Header */}
       <Navbar />
-
+      <FireParticles />
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-4">
         <div className="container mx-auto max-w-6xl relative z-10">
